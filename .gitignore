@@ -1,4 +1,4 @@
 .DS_Store
 shared/*
-!shared/.gitkeep
 !.gitkeep
+iris.key
