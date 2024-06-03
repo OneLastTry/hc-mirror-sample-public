@@ -1,4 +1,4 @@
-# Health Connect Mirror Sample
+# InterSystems HealthShare Health Connect Mirror Sample
 
 ## Architecture
 
