@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"name": "main",
+			"path": ".",
+			"objectscript.conn.active": false
+		},
+		{
+			"name": "healthconnect-user",
+			"path": "code/healthconnect-user"
+		}
+	],
+	"settings": {
+		"objectscript.conn": {
+			"active": true
+		},
+		"intersystems.servers": {
+			"healthconnect": {
+				"webServer": {
+					"scheme": "http",
+					"host": "localhost",
+					"port": 8080
+				},
+				"description": "Health Connect",
+				"username": "superuser",
+                "password": "SYS",
+			},
+			"/default": "healthconnect"
+		}
+	}
+}

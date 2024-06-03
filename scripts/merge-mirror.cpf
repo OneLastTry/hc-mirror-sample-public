@@ -1,0 +1,14 @@
+[Startup]
+WebServerPort=80
+PasswordHash=683509af881db04d3cdbae1ce6019414a17de105005d8241bd5173d6bf600206c7f8ea8c6fbbc1ed97220a4a5e9a322d986a24e02052f1de228acd7150d700d6,09218338046c09da4542a261bd210b3bb4714b464fe4f6fdb964b11277ddc8f759601bfc0a464c6b59f22167bd084faa47e43cc89ea56ca26ef9879944f27260,10000,SHA512
+
+[Config]
+MaxServerConn=16
+globals=0,0,1024,0,0,0
+
+[Actions]
+ModifyService:Name=%service_ecp,Enabled=1
+ConfigMirror:Name=HEALTHCONNECT,Map="primary,backup",Member=auto,Primary=auto,ArbiterURL=arbiter:2188
+
+Execute:Namespace=USER,ClassName="%SYSTEM.OBJ",MethodName="Load",Arg1="/code/Custom/Loader.cls",Arg2="ck",Arg3="",Arg4=1
+Execute:Namespace=USER,ClassName="Custom.Loader",MethodName="Load"
