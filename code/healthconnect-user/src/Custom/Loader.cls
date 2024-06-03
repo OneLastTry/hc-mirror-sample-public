@@ -1,7 +1,7 @@
 Class Custom.Loader
 {
 
-Parameter AUTOMIRROR = 1;
+Parameter AUTOMIRROR = 0;
 
 /// this method is called automatically when the container is initiated
 ClassMethod Load() As %Status
